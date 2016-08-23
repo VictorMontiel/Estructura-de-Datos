@@ -16,7 +16,7 @@ public class Metodosdeorga {
      */
     public static void main(String[] args) {
         
-        MetodoDeOrganizacion.seleccion(MetodoDeOrganizacion.setVector());
+        MetodoDeOrganizacion.seleccion(MetodoDeOrganizacion.setVector());//llama a los metodos
         
     }
     

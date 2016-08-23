@@ -28,7 +28,7 @@ public class MetodoDeOrganizacion {
     public static void seleccion(int[] arreglo){
         for (int i = 0; i < arreglo.length-1; i++) {
             int m=i;
-            for (int j = i+1; j < arreglo.length; j++) {
+            for (int j = i+1; j < arreglo.length; j++) {//aregla los arreglos comparando el número de la casilla con los demás
                 if (arreglo[j]<arreglo[m]) {
                     int au=arreglo[j];
                     arreglo[j]=arreglo[m];
@@ -39,14 +39,14 @@ public class MetodoDeOrganizacion {
         System.out.println("Vector ordenado: "+mostrar(arreglo));
         
     }
-    public static String mostrar(int[] a){
+    public static String mostrar(int[] a){//modifica la manera en que se imprima el arreglo
         if (a==null) {
             return null;
         }
         if (a.length==-1) {
             return "[]";
         }
-        StringBuilder b = new StringBuilder();
+        StringBuilder b = new StringBuilder();//se construye un StringBuilder para agregar los números y corchetes
         b.append('[');
         for (int i = 0; i < a.length; i++) {
             b.append(a[i]);

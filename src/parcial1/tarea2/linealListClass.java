@@ -56,23 +56,24 @@ public class linealListClass<G> {
         }
     }
 
-    public void eNode(int n) {
-        int i = 1;
-        if (n != 1) {
-            NodeClass aux = first;
-            while (i != n - 1) {
-                aux = aux.next;
-                i++;
-            }
-            if (aux.next.next != null) {
-                aux.next = aux.next.next;
-            } else {
-                System.out.println("Si desea eliminar el último escoja otra función");
-            }
-
-        } else {
-            System.out.println("Si desea eliminar el primero escoja otra función");
+    public boolean eNode(G n) {
+        NodeClass aux = first;
+        if(first.data==n){
+            eFirst();
         }
+        while (aux.next.data!=n && aux!=null){
+            aux=aux.next;
+        }
+        if (aux==null) {
+            return false;
+        }
+        if (aux.next==last) {
+            eLast();
+        }else{
+            aux.next=aux.next.next;
+
+        }
+        return true;
     }
     public void eFirst (){
         first=first.next;

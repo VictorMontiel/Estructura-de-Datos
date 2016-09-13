@@ -47,10 +47,15 @@ public class linealListClass<G> {
             NodeClass aux;
             aux = first;
             while (aux != null) {
-                System.out.print("" + aux.data);
+                if (aux==first) {
+                    System.out.print("["+aux.data+"|->");
+                    aux = aux.next;
+                }else{
+                System.out.print("" + aux.data+"|->");
                 aux = aux.next;
+                }
             }
-            System.out.println("");
+            System.out.println("☠]");
         } else {
             System.out.println("Está vacia");
         }

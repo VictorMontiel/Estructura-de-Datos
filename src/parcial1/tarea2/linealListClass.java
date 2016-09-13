@@ -65,20 +65,20 @@ public class linealListClass<G> {
         NodeClass aux = first;
         if(first.data==n){
             eFirst();
+            return true;
         }
-        while (aux.next.data!=n && aux!=null){
+        if (last.data==n) {
+            eLast();
+            return true;
+        }
+        while (aux.next!=null && aux.next.data!=n ){
             aux=aux.next;
         }
-        if (aux==null) {
-            return false;
-        }
-        if (aux.next==last) {
-            eLast();
-        }else{
+        if (aux.next!=null && aux.next.data==n) {
             aux.next=aux.next.next;
-
+            return true;
         }
-        return true;
+            return false;
     }
     public void eFirst (){
         first=first.next;

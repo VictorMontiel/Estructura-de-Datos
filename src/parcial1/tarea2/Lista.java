@@ -5,6 +5,8 @@
  */
 package parcial1.tarea2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Paco
@@ -24,7 +26,14 @@ public class Lista {
         lista.showLista();
         lista.eLast();
         lista.showLista();
-        lista.eNode(3);
+        Scanner es = new Scanner (System.in);
+        System.out.println("Escriba el número que desea borrar de la lista");
+        int x = es.nextInt();
+        if (lista.eNode(x)) {
+            System.out.println("Se borró el número exitosamente");   
+        }else{
+            System.out.println("No se encontró el número");
+        }
         lista.showLista();
     }
     

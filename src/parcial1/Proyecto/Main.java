@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package parcial1.Proyecto;
 
 import java.util.Scanner;
@@ -10,6 +5,11 @@ import java.util.Scanner;
 /**
  *
  * @author SortingSolutions
+ * "Making it easier to find your solutions"
+Víctor Hugo Montiel Gómez 		A01411295
+Luisa Fernanda Pineda Ochoa 		A00513827
+Daniel Alexandro Martínez Chaverri 	A00513954
+Oscar Daniel Nedzelsky Casanova 	A00513376
  */
 public class Main {
 

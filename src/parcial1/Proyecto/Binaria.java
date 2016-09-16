@@ -54,7 +54,15 @@ public class Binaria extends Busquedas implements MOrdenamiento{
 
     @Override
     public void MBurbuja(int[] a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (int i = 0; i < a.length - 1; i++) {
+            for (int j = 0; j < a.length - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    int aux = a[j + 1];
+                    a[j + 1] = a[j];
+                    a[j] = aux;
+                }
+            }
+        }
     }
 
     @Override

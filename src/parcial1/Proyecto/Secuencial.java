@@ -1,19 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package parcial1.Proyecto;
 
 /**
  *
- * @author Paco
+ * @author SortingSolutions
  */
 public class Secuencial extends Busquedas implements MOrdenamiento {
 
+    /**
+     *
+     * @param v el vector de enteros
+     * @param n el dato que se busca
+     * @return la posicion en que se encuentre el dato
+     */
     public static Integer Busqueda(int[] v, int n) {//método para buscar secuencialmente
         Integer posicion = -1;
-        for (int i = 0; i < v.length; i++) {
+        for (int i = 0; i < v.length; i++) {//Busca el dato incrementando la posicion 1 a la vez
             if (v[i] == n) {
                 posicion = i;
             }
@@ -22,10 +23,15 @@ public class Secuencial extends Busquedas implements MOrdenamiento {
         return posicion;
     }
 
+    /**
+     *
+     * @param a el vector de enteros que se ordenara con el algoritmo
+     * Seleccion-Insercion
+     */
     @Override
     public void MSeleccion(int[] a) {
         for (int i = 0; i < a.length - 1; i++) {
-            for (int j = i + 1; j < a.length; j++) {//aregla los arreglos comparando el número de la casilla con los demás
+            for (int j = i + 1; j < a.length; j++) {//aregla los arreglos comparando el número de la casilla con los demás siguientes
                 if (a[j] < a[i]) {
                     int au = a[j];
                     a[j] = a[i];
@@ -35,11 +41,15 @@ public class Secuencial extends Busquedas implements MOrdenamiento {
         }
     }
 
+    /**
+     *
+     * @param a el vector de enteros que se ordenara con el algortimo Burbuja
+     */
     @Override
     public void MBurbuja(int[] a) {
-        for (int i = 0; i < a.length - 1; i++) {
-            for (int j = 0; j < a.length - 1; j++) {
-                if (a[j] > a[j + 1]) {
+        for (int i = 0; i < a.length - 1; i++) {//Hace que recorra todo el vector
+            for (int j = 0; j < a.length - 1; j++) {//Recorre el mismo vector
+                if (a[j] > a[j + 1]) {//Compara la posicion que esta enfrente y si es menor, la cambia de posicion
                     int aux = a[j + 1];
                     a[j + 1] = a[j];
                     a[j] = aux;
@@ -48,6 +58,14 @@ public class Secuencial extends Busquedas implements MOrdenamiento {
         }
     }
 
+    /**
+     *
+     * @param arreglo el vector de enteros que ordenamos con el algoritmo
+     * Quicksort
+     * @param inicio la posicion de inicio del vector
+     * @param end la posicion final del vector
+     * @return
+     */
     @Override
     public int[] MQSort(int[] arreglo, int inicio, int end) {
         if (end > inicio) {//el caso base de esta recursividad es mientras el inicio sea menor que el final

@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Paco
+ * @author SortingSolutions
  */
 public class Main {
 
